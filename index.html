@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>hekatoons — leitor de mangá</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1 class="display">H<span>e</span>katoons</h1>
+  <input id="search" type="text" placeholder="Buscar mangá…" oninput="setQuery(this.value)">
+</header>
+
+<main>
+  <section id="view-library" class="view active">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Catálogo</p>
+        <h2 class="display">Em alta agora</h2>
+      </div>
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-sort="recentes">Recentes</button>
+        <button class="tab" data-sort="capitulos">Mais capítulos</button>
+        <button class="tab" data-sort="az">A–Z</button>
+      </div>
+    </div>
+    <div id="grid"></div>
+    <p id="empty">Nenhum mangá encontrado.</p>
+  </section>
+
+  <section id="view-manga" class="view">
+    <button class="back" onclick="goLibrary()">← Voltar para a biblioteca</button>
+    <div id="manga-body"></div>
+  </section>
+
+  <section id="view-reader" class="view">
+    <div class="reader-top">
+      <button class="back" id="reader-back" style="margin:0;">← Voltar para capítulos</button>
+      <span class="chap-title" id="reader-chap-label"></span>
+    </div>
+    <div class="page-wrap"><div class="page" id="page-el">
+      <div class="pnum" id="page-num"></div>
+      <div class="ptxt" id="page-txt"></div>
+    </div></div>
+    <div class="reader-nav">
+      <button class="nav-btn" id="prev-btn">← Página anterior</button>
+      <span class="page-count" id="page-count"></span>
+      <button class="nav-btn" id="next-btn">Próxima página →</button>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
