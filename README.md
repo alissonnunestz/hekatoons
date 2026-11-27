@@ -1,5 +1,5 @@
 [Uploading hekatoons.md…]()
-# Tinta — biblioteca + leitor de mangá
+# hekatoons — biblioteca + leitor de mangá
 
 ## A ideia geral
 
